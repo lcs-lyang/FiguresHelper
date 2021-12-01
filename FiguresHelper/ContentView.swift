@@ -33,13 +33,14 @@ struct ContentView: View {
                         Text("100")
             })
             Spacer()
-            
+        
+            .navigationTitle("Circle")
         }
         
-        .navigationTitle("Circle")
+       
             
     }
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
