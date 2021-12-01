@@ -9,13 +9,43 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        
+            
+            Text("Radius")
+                .padding(5)
+            
+            HStack{
+                Spacer()
+                Text("\(25)")
+                Spacer()
+            }
+            
+            Slider(value: .constant(25.0),
+                   in: 0.0...100.0,
+                   label: {
+                        Text("Opacity")
+            },
+                   minimumValueLabel: {
+                        Text("0")
+            },
+                   maximumValueLabel: {
+                        Text("100")
+            })
+            Spacer()
+            
+        }
+        
+        .navigationTitle("Circle")
+            
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NavigationView{
+            ContentView()
+        }
+        
     }
 }
